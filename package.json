@@ -59,7 +59,7 @@
     "@adonisjs/auth": "^10.0.0-next.0",
     "@adonisjs/core": "^7.0.0-next.4",
     "@adonisjs/cors": "^3.0.0-next.0",
-    "@adonisjs/inertia": "^4.0.0-next.5",
+    "@adonisjs/inertia": "^4.0.0-next.6",
     "@adonisjs/lucid": "^22.0.0-next.0",
     "@adonisjs/session": "^8.0.0-next.0",
     "@adonisjs/shield": "^9.0.0-next.1",
