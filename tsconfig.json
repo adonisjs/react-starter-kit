@@ -5,7 +5,5 @@
     "jsx": "react",
     "outDir": "./build"
   },
-  "references": [{ "path": "./inertia/tsconfig.json" }],
-  "include": ["**/*", "./.adonisjs/server/**/*"],
-  "exclude": ["./inertia/**/*", "node_modules", "build"]
+  "references": [{ "path": "./inertia/tsconfig.json" }]
 }

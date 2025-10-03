@@ -3,17 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <title inertia>
-      AdonisJS x Inertia x VueJS
+      AdonisJS
     </title>
+
     @viteReactRefresh()
     @vite(['inertia/app.tsx', `inertia/pages/${page.component}.tsx`])
     @inertiaHead()
     @stack('dumper')
   </head>
 
-  <body class="min-h-screen w-screen font-sans">
+  <body>
     @inertia()
   </body>
 
