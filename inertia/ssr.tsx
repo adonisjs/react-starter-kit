@@ -1,4 +1,6 @@
+import { ReactNode } from 'react'
 import ReactDOMServer from 'react-dom/server'
+import Layout from '~/components/layouts/default'
 import { createInertiaApp } from '@inertiajs/react'
 import { resolvePageComponent } from '@adonisjs/inertia/helpers'
 
@@ -9,7 +11,8 @@ export default function render(page: any) {
     resolve: (name) => {
       return resolvePageComponent(
         `./pages/${name}.tsx`,
-        import.meta.glob('./pages/**/*.tsx', { eager: true })
+        import.meta.glob('./pages/**/*.tsx', { eager: true }),
+        (page: ReactNode) => <Layout children={page} />
       )
     },
     setup: ({ App, props }) => {

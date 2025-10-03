@@ -37,7 +37,7 @@
     "@adonisjs/assembler": "^8.0.0-next.13",
     "@adonisjs/eslint-config": "^3.0.0-next.4",
     "@adonisjs/prettier-config": "^1.4.5",
-    "@adonisjs/tsconfig": "^2.0.0-next.1",
+    "@adonisjs/tsconfig": "^2.0.0-next.2",
     "@japa/assert": "^4.1.1",
     "@japa/plugin-adonisjs": "^5.0.0-next.0",
     "@japa/runner": "^4.4.0",
