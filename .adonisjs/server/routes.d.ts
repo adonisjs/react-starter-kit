@@ -1,13 +1,15 @@
 import '@adonisjs/core/types/http'
 
-declare module '@adonisjs/core/types/http' {
-  type ScannedRoutes = {
-    ALL: {
-    },
-    GET: {
-    },
-    HEAD: {
-    },
+type ParamValue = string | number | bigint | boolean
+
+export type ScannedRoutes = {
+  ALL: {
   }
-export interface RoutesList extends ScannedRoutes {}
+  GET: {
+  }
+  HEAD: {
+  }
+}
+declare module '@adonisjs/core/types/http' {
+  export interface RoutesList extends ScannedRoutes {}
 }
