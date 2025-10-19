@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
+import Layout from '~/layouts/default'
 import ReactDOMServer from 'react-dom/server'
-import Layout from '~/components/layouts/default'
 import { createInertiaApp } from '@inertiajs/react'
 import { resolvePageComponent } from '@adonisjs/inertia/helpers'
 
