@@ -1,7 +1,7 @@
 import '@adonisjs/inertia/types'
 
 import type React from 'react'
-  import type { Prettify } from '@adonisjs/core/types/common'
+import type { Prettify } from '@adonisjs/core/types/common'
 
 type ExtractProps<T> =
   T extends React.FC<infer Props>
