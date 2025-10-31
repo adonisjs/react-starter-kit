@@ -2,10 +2,10 @@ export default function Home() {
   return (
     <>
       <div className="hero">
-        <h1>It works — welcome to the simplicity of a Hypermedia app</h1>
+        <h1>It works — welcome to the power of a full-stack React app</h1>
         <p>
-          A lightweight foundation for building modern web interfaces — straightforward, flexible,
-          and true to the web's core simplicity.
+          Powered by Inertia and React, this setup blends server-driven routing with rich
+          client-side interactivity — seamless, fast, and cohesive.
         </p>
       </div>
 
