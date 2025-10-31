@@ -5,7 +5,7 @@ export default function Login() {
     <div className="form-container">
       <div>
         <h1> Login </h1>
-        <p>Enter your details below to create your account</p>
+        <p>Enter your details below to login to your account</p>
       </div>
 
       <div>
