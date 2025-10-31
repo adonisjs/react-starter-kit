@@ -1,5 +1,7 @@
-import { ReactNode } from 'react'
+import './css/app.css'
+import { ReactElement } from 'react'
 import Layout from '~/layouts/default'
+import { Data } from '~/generated/data'
 import { createRoot } from 'react-dom/client'
 import { createInertiaApp } from '@inertiajs/react'
 import { resolvePageComponent } from '@adonisjs/inertia/helpers'
@@ -12,7 +14,7 @@ createInertiaApp({
     return resolvePageComponent(
       `./pages/${name}.tsx`,
       import.meta.glob('./pages/**/*.tsx'),
-      (page: ReactNode) => <Layout children={page} />
+      (page: ReactElement<Data.SharedProps>) => <Layout children={page} />
     )
   },
   setup({ el, App, props }) {
