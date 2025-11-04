@@ -48,10 +48,8 @@ export default function Layout({ children }: { children: ReactElement<Data.Share
           </div>
         </div>
       </header>
-      <main>
-        <Toaster position="top-center" richColors />
-        {children}
-      </main>
+      <main>{children}</main>
+      <Toaster position="top-center" richColors />
     </>
   )
 }

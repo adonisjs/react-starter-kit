@@ -1,7 +1,7 @@
-export default function NotFound({ error }: { error: { message: string } }) {
+export default function NotFound() {
   return (
     <>
-      <h1>{error.message}</h1>
+      <h1>Page not found</h1>
     </>
   )
 }

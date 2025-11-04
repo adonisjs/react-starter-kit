@@ -1,7 +1,7 @@
-export default function ServerError({ error }: { error: { message: string } }) {
+export default function ServerError() {
   return (
     <>
-      <h1>{error.message}</h1>
+      <h1>Something went wrong</h1>
     </>
   )
 }
