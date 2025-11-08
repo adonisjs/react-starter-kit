@@ -67,6 +67,7 @@
     "@adonisjs/static": "^2.0.0-next.1",
     "@adonisjs/vite": "^5.1.0-next.2",
     "@inertiajs/react": "^2.2.19",
+    "@tuyau/core": "1.0.0-beta.1",
     "@vinejs/vine": "^4.1.0",
     "better-sqlite3": "^12.5.0",
     "edge.js": "^6.3.0",

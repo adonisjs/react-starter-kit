@@ -17,6 +17,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '~/': `${import.meta.dirname}/inertia/`,
+      '~/generated/registry': `${import.meta.dirname}/../.adonisjs/client/registry.js`,
     },
   },
 })
