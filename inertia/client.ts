@@ -1,4 +1,4 @@
-import { registry } from '~/generated/registry'
+import { registry } from '~registry'
 import { createTuyau } from '@tuyau/core/client'
 
 export const client = createTuyau({

@@ -1,7 +1,8 @@
 import { toast, Toaster } from 'sonner'
 import { ReactElement, useEffect } from 'react'
 import { Data } from '~/generated/data'
-import { Form, Link, usePage } from '@inertiajs/react'
+import { Form, usePage } from '@inertiajs/react'
+import { Link } from '@adonisjs/inertia/react'
 
 export default function Layout({ children }: { children: ReactElement<Data.SharedProps> }) {
   useEffect(() => {
@@ -17,7 +18,7 @@ export default function Layout({ children }: { children: ReactElement<Data.Share
       <header>
         <div>
           <div>
-            <Link href="/">
+            <Link route="home">
               <svg
                 width="120"
                 height="24"
@@ -40,8 +41,8 @@ export default function Layout({ children }: { children: ReactElement<Data.Share
                 </Form>
               ) : (
                 <>
-                  <Link href="/signup">Signup</Link>
-                  <Link href="/login">Login</Link>
+                  <Link route="new_account.create">Signup</Link>
+                  <Link route="session.create">Login</Link>
                 </>
               )}
             </nav>
