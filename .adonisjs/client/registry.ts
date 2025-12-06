@@ -1,9 +1,11 @@
 /* eslint-disable prettier/prettier */
-import { type AdonisEndpoint } from '@tuyau/core/types'
-import type { Registry } from './registry.schema'
+import type { AdonisEndpoint } from '@tuyau/core/types'
+import type { Registry } from './registry.schema.d.ts'
+import type { ApiDefinition } from './registry.schema.tree.d.ts'
+
 const placeholder: any = {}
 
-export const registry = {
+const routes = {
   'home': {
     methods: ["GET","HEAD"],
     pattern: '/',
@@ -39,5 +41,19 @@ export const registry = {
     pattern: '/logout',
     tokens: [{"old":"/logout","type":0,"val":"logout","end":""}],
     types: placeholder as Registry['session.destroy']['types'],
-  }
+  },
 } as const satisfies Record<string, AdonisEndpoint>
+
+export { routes }
+
+export const registry = {
+  routes,
+  $tree: {} as ApiDefinition,
+}
+
+declare module '@tuyau/core/types' {
+  export interface UserRegistry {
+    routes: typeof routes
+    $tree: ApiDefinition
+  }
+}

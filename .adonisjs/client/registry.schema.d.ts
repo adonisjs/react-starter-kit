@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 /// <reference path="../../adonisrc.ts" />
 
-import type { AdonisEndpoint } from '@tuyau/core/types'
+import type { ExtractBody, ExtractQuery } from '@tuyau/core/types'
 import type { Infer } from '@vinejs/vine/types'
 
 export interface Registry {
@@ -24,18 +24,18 @@ export interface Registry {
       paramsTuple: []
       params: {}
       query: {}
-      response: ReturnType<import('#controllers/new_account_controller').default['create']>
+      response: Awaited<ReturnType<import('#controllers/new_account_controller').default['create']>>
     }
   }
   'new_account.store': {
     methods: ["POST"]
     pattern: '/signup'
     types: {
-      body: Infer<(typeof import('#validators/user').signupValidator)>
+      body: ExtractBody<Infer<(typeof import('#validators/user').signupValidator)>>
       paramsTuple: []
       params: {}
-      query: {}
-      response: ReturnType<import('#controllers/new_account_controller').default['store']>
+      query: ExtractQuery<Infer<(typeof import('#validators/user').signupValidator)>>
+      response: Awaited<ReturnType<import('#controllers/new_account_controller').default['store']>>
     }
   }
   'session.create': {
@@ -46,7 +46,7 @@ export interface Registry {
       paramsTuple: []
       params: {}
       query: {}
-      response: ReturnType<import('#controllers/session_controller').default['create']>
+      response: Awaited<ReturnType<import('#controllers/session_controller').default['create']>>
     }
   }
   'session.store': {
@@ -57,7 +57,7 @@ export interface Registry {
       paramsTuple: []
       params: {}
       query: {}
-      response: ReturnType<import('#controllers/session_controller').default['store']>
+      response: Awaited<ReturnType<import('#controllers/session_controller').default['store']>>
     }
   }
   'session.destroy': {
@@ -68,11 +68,7 @@ export interface Registry {
       paramsTuple: []
       params: {}
       query: {}
-      response: ReturnType<import('#controllers/session_controller').default['destroy']>
+      response: Awaited<ReturnType<import('#controllers/session_controller').default['destroy']>>
     }
   }
-}
-
-declare module '@tuyau/core/types' {
-  export interface UserRegistry extends Registry {}
 }

@@ -1,7 +1,7 @@
 import { toast, Toaster } from 'sonner'
 import { ReactElement, useEffect } from 'react'
 import { Data } from '~/generated/data'
-import { Form, usePage } from '@inertiajs/react'
+import { usePage } from '@inertiajs/react'
 import { Link } from '@adonisjs/inertia/react'
 
 export default function Layout({ children }: { children: ReactElement<Data.SharedProps> }) {
@@ -36,9 +36,7 @@ export default function Layout({ children }: { children: ReactElement<Data.Share
           <div>
             <nav>
               {children.props.user ? (
-                <Form method="POST" action="/logout">
-                  <button type="submit"> Logout </button>
-                </Form>
+                <Link route="session.create">Logout</Link>
               ) : (
                 <>
                   <Link route="new_account.create">Signup</Link>
