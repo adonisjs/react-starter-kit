@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-/// <reference path="../../adonisrc.ts" />
+/// <reference path="../manifest.d.ts" />
 
 import type { ExtractBody, ExtractQuery } from '@tuyau/core/types'
 import type { InferInput } from '@vinejs/vine/types'

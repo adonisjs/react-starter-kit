@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import type { AdonisEndpoint } from '@tuyau/core/types'
-import type { Registry } from './registry.schema.d.ts'
-import type { ApiDefinition } from './registry.schema.tree.d.ts'
+import type { Registry } from './schema.d.ts'
+import type { ApiDefinition } from './tree.d.ts'
 
 const placeholder: any = {}
 
