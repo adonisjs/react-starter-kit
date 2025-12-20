@@ -1,6 +1,7 @@
+import { urlFor } from '~/client'
+import { Data } from '~generated/data'
 import { toast, Toaster } from 'sonner'
 import { ReactElement, useEffect } from 'react'
-import { Data } from '~/generated/data'
 import { Form, Link, usePage } from '@inertiajs/react'
 
 export default function Layout({ children }: { children: ReactElement<Data.SharedProps> }) {
@@ -17,7 +18,7 @@ export default function Layout({ children }: { children: ReactElement<Data.Share
       <header>
         <div>
           <div>
-            <Link href="/">
+            <Link href={urlFor('home')}>
               <svg
                 width="120"
                 height="24"
@@ -35,13 +36,13 @@ export default function Layout({ children }: { children: ReactElement<Data.Share
           <div>
             <nav>
               {children.props.user ? (
-                <Form method="POST" action="/logout">
+                <Form method="POST" action={urlFor('session.destroy')}>
                   <button type="submit"> Logout </button>
                 </Form>
               ) : (
                 <>
-                  <Link href="/signup">Signup</Link>
-                  <Link href="/login">Login</Link>
+                  <Link href={urlFor('new_account.create')}>Signup</Link>
+                  <Link href={urlFor('session.create')}>Login</Link>
                 </>
               )}
             </nav>

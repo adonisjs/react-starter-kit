@@ -1,7 +1,7 @@
 import './css/app.css'
 import { ReactElement } from 'react'
 import Layout from '~/layouts/default'
-import { Data } from '~/generated/data'
+import { Data } from '~generated/data'
 import { createRoot } from 'react-dom/client'
 import { createInertiaApp } from '@inertiajs/react'
 import { resolvePageComponent } from '@adonisjs/inertia/helpers'

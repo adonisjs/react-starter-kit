@@ -1,4 +1,5 @@
 import { Form } from '@inertiajs/react'
+import { urlFor } from '~/client'
 
 export default function Login() {
   return (
@@ -9,7 +10,7 @@ export default function Login() {
       </div>
 
       <div>
-        <Form method="POST" action="/login">
+        <Form method="POST" action={urlFor('session.store')}>
           {({ errors }) => (
             <>
               <div>

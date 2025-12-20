@@ -1,4 +1,5 @@
 import { Form } from '@inertiajs/react'
+import { urlFor } from '~/client'
 
 export default function Signup() {
   return (
@@ -9,7 +10,7 @@ export default function Signup() {
       </div>
 
       <div>
-        <Form method="POST" action="/signup">
+        <Form method="POST" action={urlFor('new_account.store')}>
           {({ errors }) => (
             <>
               <div>
