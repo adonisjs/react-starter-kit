@@ -1,8 +1,8 @@
-import { urlFor } from '~/client'
+import { Form, Link } from '@adonisjs/inertia/react'
 import { Data } from '~generated/data'
 import { toast, Toaster } from 'sonner'
 import { ReactElement, useEffect } from 'react'
-import { Form, Link, usePage } from '@inertiajs/react'
+import { usePage } from '@inertiajs/react'
 
 export default function Layout({ children }: { children: ReactElement<Data.SharedProps> }) {
   useEffect(() => {
@@ -18,7 +18,7 @@ export default function Layout({ children }: { children: ReactElement<Data.Share
       <header>
         <div>
           <div>
-            <Link href={urlFor('home')}>
+            <Link route="home">
               <svg
                 width="120"
                 height="24"
@@ -36,13 +36,13 @@ export default function Layout({ children }: { children: ReactElement<Data.Share
           <div>
             <nav>
               {children.props.user ? (
-                <Form method="POST" action={urlFor('session.destroy')}>
+                <Form route="session.destroy">
                   <button type="submit"> Logout </button>
                 </Form>
               ) : (
                 <>
-                  <Link href={urlFor('new_account.create')}>Signup</Link>
-                  <Link href={urlFor('session.create')}>Login</Link>
+                  <Link route="new_account.create">Signup</Link>
+                  <Link route="session.create">Login</Link>
                 </>
               )}
             </nav>

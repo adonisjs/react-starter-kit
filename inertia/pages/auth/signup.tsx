@@ -1,5 +1,4 @@
-import { Form } from '@inertiajs/react'
-import { urlFor } from '~/client'
+import { Form } from '@adonisjs/inertia/react'
 
 export default function Signup() {
   return (
@@ -10,7 +9,7 @@ export default function Signup() {
       </div>
 
       <div>
-        <Form method="POST" action={urlFor('new_account.store')}>
+        <Form route="new_account.store">
           {({ errors }) => (
             <>
               <div>
