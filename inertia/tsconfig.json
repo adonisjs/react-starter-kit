@@ -4,11 +4,15 @@
     "baseUrl": ".",
     "module": "ESNext",
     "jsx": "react-jsx",
-    "composite": true,
     "paths": {
       "~/*": ["./*"],
       "~generated/*": ["../.adonisjs/client/*"]
     }
   },
-  "include": ["./**/*.ts", "./**/*.tsx", "../.adonisjs/client/**/*.ts"]
+  "include": [
+    "./**/*.ts",
+    "./**/*.tsx",
+    "../.adonisjs/client/**/*.ts",
+    "../.adonisjs/server/**/*.ts"
+  ]
 }
