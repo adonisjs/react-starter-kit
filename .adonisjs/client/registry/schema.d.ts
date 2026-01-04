@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 /// <reference path="../manifest.d.ts" />
 
-import type { ExtractBody, ExtractQuery, ExtractQueryForGet } from '@tuyau/core/types'
+import type { ExtractBody, ExtractQuery } from '@tuyau/core/types'
 import type { InferInput } from '@vinejs/vine/types'
 
 export interface Registry {
