@@ -1,8 +1,8 @@
-import { Form, Link } from '@adonisjs/inertia/react'
-import { Data } from '~generated/data'
+import { Data } from '@generated/data'
 import { toast, Toaster } from 'sonner'
-import { ReactElement, useEffect } from 'react'
 import { usePage } from '@inertiajs/react'
+import { ReactElement, useEffect } from 'react'
+import { Form, Link } from '@adonisjs/inertia/react'
 
 export default function Layout({ children }: { children: ReactElement<Data.SharedProps> }) {
   useEffect(() => {
