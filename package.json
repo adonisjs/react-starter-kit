@@ -61,7 +61,7 @@
     "@adonisjs/core": "^7.0.0-next.16",
     "@adonisjs/cors": "^3.0.0-next.0",
     "@adonisjs/inertia": "^4.0.0-next.16",
-    "@adonisjs/lucid": "^22.0.0-next.1",
+    "@adonisjs/lucid": "^22.0.0-next.4",
     "@adonisjs/session": "^8.0.0-next.1",
     "@adonisjs/shield": "^9.0.0-next.2",
     "@adonisjs/static": "^2.0.0-next.1",
