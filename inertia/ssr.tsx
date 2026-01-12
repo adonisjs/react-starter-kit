@@ -1,8 +1,10 @@
+import { client } from '~/client'
 import { ReactElement } from 'react'
 import Layout from '~/layouts/default'
 import { Data } from '@generated/data'
 import ReactDOMServer from 'react-dom/server'
 import { createInertiaApp } from '@inertiajs/react'
+import { TuyauProvider } from '@adonisjs/inertia/react'
 import { resolvePageComponent } from '@adonisjs/inertia/helpers'
 
 export default function render(page: any) {
@@ -17,7 +19,11 @@ export default function render(page: any) {
       )
     },
     setup: ({ App, props }) => {
-      return <App {...props} />
+      return (
+        <TuyauProvider client={client}>
+          <App {...props} />
+        </TuyauProvider>
+      )
     },
   })
 }
